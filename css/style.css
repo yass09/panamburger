@@ -125,6 +125,11 @@ h1, h2, h3, h4 {
     flex-grow: 1;
 }
 
+.main-content-text h3{
+    margin-bottom: 4px;
+    font-size: 1.5em
+}
+
 .main-content-text-right {
   background-color: coral;
   margin-left: -60px;
@@ -186,8 +191,10 @@ footer {
     padding:20px;
 }
 
-.fa {
+.fa-chevron-up {
     color: black;
+    margin-bottom: 1em
+
 }
 
                     /*MEDIA QUERIES */
