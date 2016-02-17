@@ -14,8 +14,9 @@
     width: 100%;
     padding-top: 10px;
     position: fixed;
-    background-color: white;
+    background: rgba(255,255,255,1);
     margin: 0;
+    z-index: 2;
 }
 
 .header-nav-buttons-list {
@@ -30,7 +31,7 @@
 
 .header-nav-buttons {
     margin: 0 15px;
-    font-size: 1em;
+    font-size: 1.2em;
     flex-grow: 1;
 }
 
@@ -40,7 +41,7 @@
 }
 
 .logo {
-    height: 7em;
+    height: 5em;
 }
 
 .header-nav-buttons-social {
@@ -81,7 +82,7 @@ h1, h2, h3, h4 {
 
 .main-content-index {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -95,7 +96,7 @@ h1, h2, h3, h4 {
 .main-content-container-left {
   color: white;
   background-color: coral;
-  z-index: 10;
+  z-index: 1;
   width: 400px;
   padding: 30px;
   margin-left: -60px;
@@ -105,7 +106,7 @@ h1, h2, h3, h4 {
 .main-content-container-right {
   color: white;
   background-color: teal;
-  z-index: 10;
+  z-index: 1;
   width: 400px;
   padding: 30px;
   margin-right: -60px;
@@ -174,19 +175,19 @@ footer {
     color: black;
 }
 
-					/*MEDIA QUERIES */
+                    /*MEDIA QUERIES */
 
 @media screen and (max-width: 980px)
-{    
-		/*MAIN 2*/
+{
+        /*MAIN 2*/
 
     .main-content-container-instagram-line-one{
 
-    		display: none;
-	}
+            display: none;
+    }
 
 }
-		
 
 
-	
+
+
