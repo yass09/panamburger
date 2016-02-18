@@ -84,22 +84,6 @@
     padding-top: 200px;
 }
 
-
-@media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-        .header-hero-image-logo{
-            height: 5em;
-        }
-        .header-hero-image-title{
-            font-size: 1em
-        }
-        .header-hero-image-home{
-            height: 300px;
-        }
-}
-
 @media screen and (max-width: 768px){
     .header-hero-image-home{
         height: 450px;
@@ -117,18 +101,17 @@
     }
 }
 
-@media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-        .header-hero-image-logo{
-            height: 5em;
-        }
-        .header-hero-image-title{
-            font-size: 1em
-        }
+@media screen and (max-width: 375px) {
+    .header-hero-image-logo{
+        height: 7em;
+    }
+    .header-hero-image-title{
+        font-size: 1em
+    }
+    .header-hero-image-home{
+        height: 300px;
+    }
 }
-
 /*  ----------------------  *\
      Main - Part 1 - Concept
 \*   --------------------- */
@@ -199,25 +182,41 @@ h1, h2, h3, h4 {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 568px){
-
-}
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1248px){
     .main-content-container{
         margin: 0 0 4em 0;
     }
+    .main-content-text{
+        margin: 50px -50 0 0;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .main-content-container{
+        margin: 0 0 2em 0;
+    }
+    .main-content-text{
+        margin: -50px 0 0 0;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main-content-container{
+        margin: 0 0 2em 0;
+    }
+
     .main-content-section {
         margin: 0.5em;
     }
-
 
     .main-content-text{
         margin: -50px 0 0 0;
         width: 60px;
         flex-grow: 0
     }
+
     .main-content-title {
         font-size: 2em;
         font-family: 'Slabo 27px', serif;
@@ -226,22 +225,11 @@ h1, h2, h3, h4 {
     }
 }
 
-@media screen and (max-width: 1024px){
-    .main-content-container{
-        margin: 0 0 4em 0;
-    }
-    .main-content-text{
-        margin: -50px 0 0 0;
-        width: 60px;
-    }
-}
-@media screen and (max-width: 1248px){
-    .main-content-container{
-        margin: 0 0 4em 0;
-    }
-    .main-content-text{
-        margin: 50px -50 0 0;
-        width: 60px;
+@media screen and (max-width: 375px) {
+    .main-content-image {
+        width: 400px;
+        height: 250px;
+        min-width: 320px;
     }
 }
 /*  ----------------------  *\
@@ -278,7 +266,7 @@ h1, h2, h3, h4 {
     opacity: 1.3 ;
 }
 
-.slider{
+.main-content-instagram-slider-container{
     display: none;
 }
 
@@ -288,26 +276,28 @@ h1, h2, h3, h4 {
 
     .main-content-instagram-photo{
         display: none;
-        z-index: 2;
     }
 
     .main-content-title-instagram {
-        color:white;
         display: none;
     }
 
-    .main-content-slider-instagram-title {
+    .main-content-instagram-slider-container {
+        display:inline;
+        width: 80%;max-width: 1000px;overflow: hidden;
+    }
+    .main-content-instagram-slider-title {
         text-shadow: -1px -1px black, 1px 1px black, -1px 0 2px #000;
         font-family: 'Slabo 27px', serif;
         font-weight:lighter;
         text-align: center;
-/*        line-height:300px;*/
+        line-height:300px;
         z-index:1;
         position: absolute;
         color:white;
     }
 
-    figure{
+    .main-content-instagram-slider{
         display: flex;
         align-items: center;
         text-align: center;
@@ -324,19 +314,11 @@ h1, h2, h3, h4 {
         animation: 15s slidy infinite;
     }
 
-    .slider {
-        display:inline;
-        width: 320px;
-        max-width:1000px;
-    }
-
-    .slider figure img {
+    .main-content-instagram-slider img {
         width: 10%; height: auto;float: left;
         height: 300px;
     }
-    .slider {
-        width: 80%;max-width: 1000px;overflow: hidden;
-    }
+
     @keyframes slidy {
         0% {left:0%;}
         20% {left:0%;}
@@ -368,8 +350,9 @@ h1, h2, h3, h4 {
 .fa-chevron-up {
     color: white;
     margin-bottom: 1em;
-
 }
+}
+
 
 /*  -------------------   *\
      Page 2 - Nos burgers
