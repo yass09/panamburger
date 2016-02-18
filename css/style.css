@@ -13,9 +13,8 @@
     justify-content: center;
     width: 100%;
     padding-top: 5px;
-    position: fixed;
+    position:fixed;
     background: rgba(255,255,255,1);
-    margin: 0;
     z-index: 2;
 }
 
@@ -53,7 +52,7 @@
       Hero Image
 \*   -------------- */
 
-.header-hero-image {
+.header-hero-image-home {
     background: linear-gradient(rgba( 0, 0, 0, 0.3 ), rgba( 0, 0, 0, 0.3 )), url(../images/hero.jpg) no-repeat center;
     background-size: cover;
     display: flex;
@@ -62,6 +61,10 @@
     justify-content: flex-end;
     height: 600px;
     min-height: 200px;
+    }
+
+.header-hero-image-logo {
+    height: 15em
 }
 
 .header-hero-image-title {
@@ -69,7 +72,17 @@
     font-family: 'Slabo 27px', serif;
     text-align: center;
     font-size: 4em;
-    margin: 0.5em;
+    margin: 0.8em;
+}
+
+.header-hero-image-page2{
+    background: linear-gradient(rgba( 0, 0, 0, 0.3 ), rgba( 0, 0, 0, 0.3 )), url(../images/hero-burger_1024.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/*    justify-content: flex-start;*/
+    padding-top: 200px
 }
 
 /*  ----------------------  *\
@@ -100,11 +113,10 @@ h1, h2, h3, h4 {
 
 .main-content-section {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  margin: 2em 1em;
+  margin: 2em 0;
 }
 
 .main-content-section-reverse{
@@ -123,6 +135,7 @@ h1, h2, h3, h4 {
     width: 400px;
     padding: 30px;
     flex-grow: 1;
+    min-width: 320px;
 }
 
 .main-content-text h3{
@@ -131,13 +144,14 @@ h1, h2, h3, h4 {
 }
 
 .main-content-text-right {
-  background-color: coral;
+  background-color: slategray;
   margin-left: -60px;
   margin-top: 50px;
 }
 
 .main-content-text-left {
-  background-color: teal;
+  background-color: lightgray;
+    color: black;
   margin-right: -60px;
   margin-top: 50px;
 }
@@ -177,10 +191,102 @@ h1, h2, h3, h4 {
     opacity: 1.3 ;
 }
 
+.slider{
+    display: none;
+}
+
+
+@media screen and (max-width: 980px)
+
+{
+    /*INSTAGRAM */
+
+    .main-content-instagram-photo{
+        display: none;
+        z-index: 2;
+    }
+    .main-content-instagram-title {
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        z-index:1;
+        position: absolute;
+        font-size: 1.2em;
+        margin-top: 80px;
+    }
+
+    .main-content-slider-title {
+        text-shadow: -1px -1px black, 1px 1px black, -1px 0 2px #000;
+        font-family: 'Slabo 27px', serif;
+        font-weight:lighter;
+        line-height:50px;
+    }
+    .slider {
+        display:inline;
+        width:80%;
+        max-width:1000px;
+    }
+    .slider figure {
+        position: relative;
+        width: 500%;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        text-align: left;
+    }
+    .slider figure img {
+        width: 20%;height: auto;float: left;
+        height: 300px;
+    }
+    .slider {
+        width: 80%;max-width: 1000px;overflow: hidden;
+    }
+    @keyframes slidy {
+        0% {left:0%;}
+        20% {left:0%;}
+        25% {left:-100%}
+        45%{left: -100%;}
+        50% {left:-200%;}
+        70% {left:200%;}
+        75% {left:300%;}
+        95% {left:-400%;}
+    }
+    .slider figure {
+        position: relative;
+        width: 400%;
+        margin: 0;
+        padding:0;
+        font-size: 0;
+        left: 0;
+        text-align: left;
+        animation: 15s slidy infinite;
+
+    }
+}
+
+
 /*  --------------   *\
         Footer
 \*   -------------- */
 
+.footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding:15px;
+    color: white;
+    margin-top: 1em;
+}
+
+.fa-chevron-up {
+    color: white;
+    margin-bottom: 1em;
+
+}
 
 /*  -------------------   *\
      Page 2 - Nos burgers
@@ -190,38 +296,49 @@ h1, h2, h3, h4 {
 .main-content-products {
   padding-top: 150px;
 }
-footer {
+
+
+/*  ---------------------------------   *\
+    Page 3 - Contact - Nous Trouver
+\*   --------------------------------   */
+
+.main-content-contact {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/facade2.jpg") center no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content: space-around;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
     flex-direction: column;
+}
+
+.main-content-contact-image{
+/*    width: 350px;*/
+    height: 320px;
+}
+
+
+.adresse {
+    min-width: 30%;
+    min-height: 20vh;
+    margin-right: 7%;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    /*border: 2px solid green;*/
-    padding:20px;
+    flex-direction: column;
+    line-height: 35px;
+    background: rgba(159,164,163,0.5 );
+    text-align: center;
+    word-wrap: break-word;
+    border: 8px double #F5A830 ;
 }
 
-.fa-chevron-up {
-    color: black;
-    margin-bottom: 1em
-
-}
-
-                    /*MEDIA QUERIES */
-
-@media screen and (max-width: 980px)
-{
-        /*MAIN 2*/
-
-    .main-content-container-instagram-line-one{
-
-            display: none;
-    }
-
-}
-
-
-
-
-
-.header-hero-image-logo {
-    height: 20em
+.main-content-contact-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 150px;
 }
