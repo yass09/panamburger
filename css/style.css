@@ -196,7 +196,7 @@ h1, h2, h3, h4 {
 }
 
 
-@media screen and (max-width: 980px)
+@media screen and (max-width: 768px)
 
 {
     /*INSTAGRAM */
@@ -227,23 +227,26 @@ h1, h2, h3, h4 {
         align-items: center;
         text-align: center;
         position: relative;
-        width: 50%;
         margin: 0;
         padding: 0;
         font-size: 0;
+        width: 400%;
+        margin: 0;
+        padding:0;
+        font-size: 0;
+        left: 0;
+        text-align: left;
+        animation: 15s slidy infinite;
     }
 
     .slider {
         display:inline;
-        width:80%;
+        width: 320px;
         max-width:1000px;
     }
-    .slider figure {
 
-        text-align: left;
-    }
     .slider figure img {
-        width: 20%;height: auto;float: left;
+        width: 10%; height: auto;float: left;
         height: 300px;
     }
     .slider {
@@ -260,14 +263,7 @@ h1, h2, h3, h4 {
         95% {left:-400%;}
     }
     .slider figure {
-        position: relative;
-        width: 400%;
-        margin: 0;
-        padding:0;
-        font-size: 0;
-        left: 0;
-        text-align: left;
-        animation: 15s slidy infinite;
+
 
     }
 }
