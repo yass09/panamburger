@@ -72,7 +72,7 @@
     font-family: 'Slabo 27px', serif;
     text-align: center;
     font-size: 4em;
-    margin: 0.8em;
+    margin: 0.em;
 }
 
 .header-hero-image-page2{
@@ -81,8 +81,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-/*    justify-content: flex-start;*/
-    padding-top: 200px
+    justify-content: center;
+    padding-top: 130px
 }
 
 /*  ----------------------  *\
@@ -205,35 +205,41 @@ h1, h2, h3, h4 {
         display: none;
         z-index: 2;
     }
-    .main-content-instagram-title {
+
+    .main-content-title-instagram {
         color:white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        z-index:1;
-        position: absolute;
-        font-size: 1.2em;
-        margin-top: 80px;
+        display: none;
     }
 
-    .main-content-slider-title {
+    .main-content-slider-instagram-title {
         text-shadow: -1px -1px black, 1px 1px black, -1px 0 2px #000;
         font-family: 'Slabo 27px', serif;
         font-weight:lighter;
-        line-height:50px;
+        text-align: center;
+/*        line-height:300px;*/
+        z-index:1;
+        position: absolute;
+        color:white;
     }
+
+    figure{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+    }
+
     .slider {
         display:inline;
         width:80%;
         max-width:1000px;
     }
     .slider figure {
-        position: relative;
-        width: 500%;
-        margin: 0;
-        padding: 0;
-        font-size: 0;
+
         text-align: left;
     }
     .slider figure img {
