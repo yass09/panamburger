@@ -60,7 +60,6 @@
     align-items: center;
     justify-content: flex-end;
     height: 600px;
-    min-height: 200px;
     }
 
 .header-hero-image-logo {
@@ -76,13 +75,58 @@
 }
 
 .header-hero-image-page2{
-    background: linear-gradient(rgba( 0, 0, 0, 0.3 ), rgba( 0, 0, 0, 0.3 )), url(../images/hero-burger_1024.jpg) no-repeat center;
+    background: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)), url(../images/hero-burger2.jpg) no-repeat center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 130px
+    padding-top: 200px;
+}
+
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .header-hero-image-logo{
+            height: 5em;
+        }
+        .header-hero-image-title{
+            font-size: 1em
+        }
+        .header-hero-image-home{
+            height: 300px;
+        }
+}
+
+@media screen and (max-width: 768px){
+    .header-hero-image-home{
+        height: 450px;
+    }
+
+    .header-hero-image-logo{
+        height: 12em;
+    }
+    .header-hero-image-title{
+        font-size: 3em
+    }
+    .header-hero-image-title{
+        justify-content: center;
+/*        margin: 0.1em*/
+    }
+}
+
+@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .header-hero-image-logo{
+            height: 5em;
+        }
+        .header-hero-image-title{
+            font-size: 1em
+        }
 }
 
 /*  ----------------------  *\
@@ -94,6 +138,14 @@ h1, h2, h3, h4 {
   font-family: 'Slabo 27px', serif;
 }
 
+.main-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+}
+
 .main-content-title {
     display: flex;
     justify-content: center;
@@ -101,14 +153,6 @@ h1, h2, h3, h4 {
     font-family: 'Slabo 27px', serif;
     color:grey;
     margin: 0.5em
-}
-
-
-.main-content-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .main-content-section {
@@ -134,12 +178,11 @@ h1, h2, h3, h4 {
     z-index: 1;
     width: 400px;
     padding: 30px;
-    flex-grow: 1;
     min-width: 320px;
 }
 
 .main-content-text h3{
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-size: 1.5em
 }
 
@@ -156,6 +199,51 @@ h1, h2, h3, h4 {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 568px){
+
+}
+
+
+@media screen and (max-width: 768px){
+    .main-content-container{
+        margin: 0 0 4em 0;
+    }
+    .main-content-section {
+        margin: 0.5em;
+    }
+
+
+    .main-content-text{
+        margin: -50px 0 0 0;
+        width: 60px;
+        flex-grow: 0
+    }
+    .main-content-title {
+        font-size: 2em;
+        font-family: 'Slabo 27px', serif;
+        color:grey;
+        margin: 0.4em
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .main-content-container{
+        margin: 0 0 4em 0;
+    }
+    .main-content-text{
+        margin: -50px 0 0 0;
+        width: 60px;
+    }
+}
+@media screen and (max-width: 1248px){
+    .main-content-container{
+        margin: 0 0 4em 0;
+    }
+    .main-content-text{
+        margin: 50px -50 0 0;
+        width: 60px;
+    }
+}
 /*  ----------------------  *\
     Main - Part 2 - Instagram
 \*   --------------------- */
@@ -170,10 +258,9 @@ h1, h2, h3, h4 {
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
-.main-content-instagram-photo img {
+    .main-content-instagram-photo img {
     width: 200px;
     height: 200px;
  -webkit-transition: all 0.3s ease-in-out;
@@ -196,9 +283,7 @@ h1, h2, h3, h4 {
 }
 
 
-@media screen and (max-width: 768px)
-
-{
+@media screen and (max-width: 768px){
     /*INSTAGRAM */
 
     .main-content-instagram-photo{
@@ -261,10 +346,6 @@ h1, h2, h3, h4 {
         70% {left:200%;}
         75% {left:300%;}
         95% {left:-400%;}
-    }
-    .slider figure {
-
-
     }
 }
 
