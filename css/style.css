@@ -369,17 +369,12 @@ h1, h2, h3, h4 {
     opacity: 1.3 ;
 }
 
-.main-content-instagram-slider-container{
-    display: none;
-}
-
 .main-content-instagram-responsive{
     display: none;
 }
 
 
 @media screen and (max-width: 768px){
-    INSTAGRAM
     .main-content-instagram{
         display: none;
     }
@@ -407,8 +402,6 @@ h1, h2, h3, h4 {
         opacity: 1.3 ;
     }
 }
-
-
 
 /*  --------------   *\
         Footer
