@@ -63,7 +63,7 @@
         padding: 0;
     }
     #menu-deroulant, #menu-deroulant ul {
-        padding: 10px;
+        padding: 15px;
         margin: 0;
         list-style: none;
     }
@@ -91,7 +91,7 @@
         left: -999em;
         text-align: left;
         z-index: 1000;
-        line-height: 25px;
+        line-height: 35px;
     }
     #menu-deroulant li:hover ul {
         /* Au survol des li du menu on replace les sous menus */
@@ -125,7 +125,7 @@
     }
     .nav-buttons {
         margin: 0 15px;
-        font-size: 1em;
+        font-size: 1.2em;
         flex-grow: 1;
     }
     .nav-buttons-links {
