@@ -56,6 +56,103 @@ p {
     font-size: 1.5em
 }
 
+.nav-responsive {
+    display: none;
+}
+/*RESPONSIVE NAV */
+
+@media screen and (max-width: 375px) {
+    .header-nav{
+        display: none;
+    }
+
+    .main-content-container {
+        margin:0;
+        padding: 0;
+    }
+    #menu-deroulant, #menu-deroulant ul {
+        padding: 10px;
+        margin: 0;
+        list-style: none;
+    }
+    #menu-deroulant {
+        /* on centre le menu dans la page */
+        text-align: center;
+    }
+    #menu-deroulant li {
+        /* on place les liens du menu horizontalement */
+        display: inline-block;
+    }
+    #menu-deroulant ul li {
+        /* on enlève ce comportement pour les liens du sous menu */
+        display: inherit;
+        color: white;
+    }
+    #menu-deroulant a {
+        text-decoration: none;
+        display: block;
+        color:white;
+    }
+    #menu-deroulant ul {
+        position: absolute;
+        /* on cache les sous menus complètement sur la gauche */
+        left: -999em;
+        text-align: left;
+        z-index: 1000;
+        line-height: 25px;
+    }
+    #menu-deroulant li:hover ul {
+        /* Au survol des li du menu on replace les sous menus */
+        left: auto;
+        background-color: black;
+        color: white;
+    }
+    .nav-responsive {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding-top: 5px;
+        z-index: 2;
+        background-color: black;
+        position: fixed;
+    }
+    .nav-logos {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        color: white;
+    }
+    .nav-buttons-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-family: 'Slabo 27px', serif;
+        padding: 0;
+    }
+    .nav-buttons {
+        margin: 0 15px;
+        font-size: 1em;
+        flex-grow: 1;
+    }
+    .nav-buttons-links {
+        text-decoration: none;
+        color:white;
+    }
+    .logo {
+        height: 3em;
+    }
+    .nav-buttons-social {
+        color: white;
+        font-size: 1.5em
+    }
+}
+/*fin test*/
+
+
+
+
 /*  --------------   *\
       Hero Image
 \*   -------------- */
@@ -68,7 +165,6 @@ p {
     align-items: center;
     justify-content: flex-end;
     height: 600px;
-    min-height: 200px;
     }
 
 .header-hero-image-logo {
@@ -84,15 +180,43 @@ p {
 }
 
 .header-hero-image-page2{
-    background: linear-gradient(rgba( 0, 0, 0, 0.3 ), rgba( 0, 0, 0, 0.3 )), url(../images/hero-burger_1024.jpg) no-repeat center;
+    background: linear-gradient(rgba( 0, 0, 0, 0.5), rgba( 0, 0, 0, 0.5)), url(../images/hero-burger2.jpg) no-repeat center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 130px
+    padding-top: 200px;
 }
 
+@media screen and (max-width: 768px){
+    .header-hero-image-home{
+        height: 450px;
+    }
+
+    .header-hero-image-logo{
+        height: 12em;
+    }
+    .header-hero-image-title{
+        font-size: 3em
+    }
+    .header-hero-image-title{
+        justify-content: center;
+/*        margin: 0.1em*/
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header-hero-image-logo{
+        height: 5em;
+    }
+    .header-hero-image-title{
+        font-size: 2em
+    }
+    .header-hero-image-home{
+        height: 300px;
+    }
+}
 /*  ----------------------  *\
      Main - Part 1 - Concept
 \*   --------------------- */
@@ -105,6 +229,14 @@ h1, h2, h3, h4 {
   font-family: 'Slabo 27px', serif;
 }
 
+.main-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+}
+
 .main-content-title {
     display: flex;
     justify-content: center;
@@ -112,14 +244,6 @@ h1, h2, h3, h4 {
     font-family: 'Slabo 27px', serif;
     color:grey;
     margin: 0.5em
-}
-
-
-.main-content-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .main-content-section {
@@ -146,12 +270,11 @@ h1, h2, h3, h4 {
     z-index: 1;
     width: 400px;
     padding: 30px;
-    flex-grow: 1;
     min-width: 320px;
 }
 
 .main-content-text h3{
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-size: 1.5em
 }
 
@@ -168,6 +291,62 @@ h1, h2, h3, h4 {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 1248px){
+    .main-content-container{
+        margin: 0 0 4em 0;
+    }
+    .main-content-text{
+        margin: 50px -50 0 0;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .main-content-container{
+        margin: 0 0 2em 0;
+    }
+    .main-content-text{
+        margin: -50px 0 0 0;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main-content-container{
+        margin: 0 0 2em 0;
+    }
+
+    .main-content-title {
+        font-size: 2em;
+        font-family: 'Slabo 27px', serif;
+        color:grey;
+        margin: 0.4em
+    }
+    .main-content-section {
+        margin: 0.5em;
+    }
+
+    .main-content-text{
+        margin: -50px 0 0 0;
+        width: 60px;
+        flex-grow: 0
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-content-section{
+        margin: 0;
+    }
+
+    .main-content-image {
+        width: 400px;
+        height: 250px;
+        min-width: 320px;
+    }
+    .main-content-text{
+        padding: 20px;
+    }
+}
 /*  ----------------------  *\
     Main - Part 2 - Instagram
 \*   --------------------- */
@@ -182,7 +361,6 @@ h1, h2, h3, h4 {
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .main-content-instagram-photo img {
@@ -203,38 +381,39 @@ h1, h2, h3, h4 {
     opacity: 1.3 ;
 }
 
-.slider{
+.main-content-instagram-slider-container{
     display: none;
 }
 
 
-@media screen and (max-width: 768px)
-
-{
-    /*INSTAGRAM */
+/*
+@media screen and (max-width: 768px){
+    INSTAGRAM
 
     .main-content-instagram-photo{
         display: none;
-        z-index: 2;
     }
 
     .main-content-title-instagram {
-        color:white;
         display: none;
     }
 
-    .main-content-slider-instagram-title {
+    .main-content-instagram-slider-container {
+        display:inline;
+        width: 80%;max-width: 1000px;overflow: hidden;
+    }
+    .main-content-instagram-slider-title {
         text-shadow: -1px -1px black, 1px 1px black, -1px 0 2px #000;
         font-family: 'Slabo 27px', serif;
         font-weight:lighter;
         text-align: center;
-/*        line-height:300px;*/
+        line-height:300px;
         z-index:1;
         position: absolute;
         color:white;
     }
 
-    figure{
+    .main-content-instagram-slider{
         display: flex;
         align-items: center;
         text-align: center;
@@ -251,19 +430,11 @@ h1, h2, h3, h4 {
         animation: 15s slidy infinite;
     }
 
-    .slider {
-        display:inline;
-        width: 320px;
-        max-width:1000px;
-    }
-
-    .slider figure img {
+    .main-content-instagram-slider img {
         width: 10%; height: auto;float: left;
         height: 300px;
     }
-    .slider {
-        width: 80%;max-width: 1000px;overflow: hidden;
-    }
+
     @keyframes slidy {
         0% {left:0%;}
         20% {left:0%;}
@@ -274,11 +445,8 @@ h1, h2, h3, h4 {
         75% {left:300%;}
         95% {left:-400%;}
     }
-    .slider figure {
-
-
-    }
 }
+*/
 
 
 /*  --------------   *\
@@ -291,6 +459,7 @@ h1, h2, h3, h4 {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     padding:15px;
     color: white;
     margin-top: 1em;
@@ -299,18 +468,30 @@ h1, h2, h3, h4 {
 .fa-chevron-up {
     color: white;
     margin-bottom: 1em;
-
 }
+@media screen and (max-width: 375px) {
+    .footer{
+        margin-top: 0
+    }
+}
+
+
 
 /*  -------------------   *\
      Page 2 - Nos burgers
 \*   -------------------- */
 
-
-.main-content-products {
-  padding-top: 150px;
+@media screen and (max-width: 768px){
+    .main-content-container-page2{
+        margin: 0;
+    }
 }
 
+@media screen and (max-width: 375px) {
+    .header-hero-image-title-page2{
+        margin-bottom: 1em
+    }
+}
 
 /*  ---------------------------------   *\
     Page 3 - Contact - Nous Trouver
@@ -358,4 +539,154 @@ h1, h2, h3, h4 {
     align-items: center;
     margin-right: 150px;
 }
+<<<<<<< HEAD
 >>>>>>> 279a4c9536bcd65fac49229152b7399395198fe7
+=======
+
+.main-content-contact {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/facade2.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.main-content-contact-image{
+    /*    width: 350px;*/
+    height: 320px;
+}
+
+.adresse {
+    min-width: 30%;
+    min-height: 20vh;
+    margin-right: 7%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    line-height: 35px;
+    background: rgba(159,164,163,0.5 );
+    text-align: center;
+    word-wrap: break-word;
+    border: 8px double #F5A830 ;
+}
+
+.main-content-contact-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 150px;
+}
+
+/*NOUS TROUVER MODE TABLETTE*/
+
+@media screen and (max-width: 800px) {
+    .main-content-contact {
+        width: auto;
+        height: 100vh;
+        background: url("../images/facade2.jpg") left no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*border: 2px solid yellow;*/
+    }
+
+    .main-content-contact-elements {
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        /*border: 2px solid blue;*/
+    }
+    .main-content-contact-image{
+        height: 20vh;
+        background: rgba(159,164,163,0.5 );
+        margin-top: 300px;
+        border: 4px double #F5A830 ;
+
+    }
+    .adresse {
+        min-width: 10%;
+        min-height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 35px;
+        background: rgba(159,164,163,0.5 );
+        text-align: center;
+        word-wrap: break-word;
+        margin-left: 45px;
+        margin-top: 20px;
+        border: 4px double #F5A830 ;
+    }
+
+    .footer{
+        margin:0;
+    }
+}
+
+/*NOUS TROUVER MODE smartphone*/
+
+@media screen and (max-width: 360px) {
+    .main-content-contact {
+        width: auto;
+        height: 100vh;
+        background: url("../images/facade2.jpg") left no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /*border: 2px solid yellow;*/
+    }
+
+    .main-content-contact-elements {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        border: 2px solid blue;
+    }
+    .main-content-contact-image{
+        display: none;
+        /*    min-height: 17vh;
+        background: rgba(159,164,163,0.5 );
+        margin-top: 250px;
+        border: 4px double #F5A830 ;*/
+    }
+
+    .adresse {
+        min-width: 30%;
+        min-height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 20px;
+        background: rgba(159,164,163,0.5 );
+        text-align: center;
+        margin: 0;
+        margin-top: 200px;
+        /*word-wrap: break-word;*/
+        border: 4px double #F5A830 ;
+    }
+
+    .footer{
+        margin:0;
+    }
+}
+>>>>>>> bbc163be9c5bf1f89cb736bb433176c0a9cb6a8c

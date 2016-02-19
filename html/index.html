@@ -6,6 +6,7 @@
     <meta property="og:url" content="#" />
     <meta property="og:image" content="../images/tableau.jpg"/>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/normalize.css">
@@ -15,6 +16,23 @@
     <title>Panamburger, le burger à la Française</title>
 </head>
 <body>
+
+    <div class="nav-responsive">
+    <ul id="menu-deroulant">
+        <li><img class="logo" src="../images/logo-menu.png" alt="Panamburger">
+            <ul>
+                <li><a href="index.html">Notre concept</a></li>
+                <li><a href="nos-burgers.html">Nos burgers</a></li>
+                <li><a href="nous-trouver.html">Nous trouver</a></li>
+            </ul>
+    </ul>
+
+    <ul class="nav-logos">
+        <li class="nav-buttons nav-buttons-social"><i class="fa fa-facebook"></i></li>
+        <li class="nav-buttons nav-buttons-social"><i class="fa fa-twitter"></i></li>
+        <li class="nav-buttons nav-buttons-social"><i class="fa fa-instagram"></i></li>
+    </ul>
+    </div>
     <header id="header">
         <nav class="header-nav">
             <ul class="header-nav-buttons-list">
@@ -67,11 +85,12 @@
                 <a href="http://www.instagram.com"><img src="../images/insta12.jpg"></a>
             </div>
             <!-- INSTAGRAM RESPONSIVE  -->
-            <div class="slider">
-                <div class="main-content-slider-instagram-title">
+<!--
+            <div class="main-content-instagram-slider-container">
+                <div class="main-content-instagram-slider-title">
                     <h2>Envoyez-nous vos photos avec #panamburger</h2>
                 </div>
-                <figure>
+                <figure class="main-content-instagram-slider">
                     <img src="../images/insta1.jpg" alt="Personne qui mange des burgers">
                     <img src="../images/insta10.jpg">
                     <img src="../images/insta16.jpg">
@@ -79,6 +98,7 @@
                     <img src="../images/insta13.jpg">
                 </figure>
             </div>
+-->
             <!-- FIN INSTAGRAM RESPONSIVE -->
         </div>
      </main>
