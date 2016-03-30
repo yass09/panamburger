@@ -31,6 +31,7 @@
     margin: 0 15px;
     font-size: 1em;
     flex-grow: 1;
+    text-align: center
 }
 
 .header-nav-buttons-links {
@@ -293,8 +294,14 @@ h1, h2, h3, h4 {
         margin: 0 0 2em 0;
     }
     .main-content-text{
-        margin: -50px 0 0 0;
+        margin: -10px 0 0 0;
         width: 60px;
+    }
+    .main-content-text-right{
+        margin-left: -60px;
+    }
+    .main-content-text-left{
+        margin-right: -60px;
     }
 }
 
@@ -315,8 +322,15 @@ h1, h2, h3, h4 {
 
     .main-content-text{
         margin: -50px 0 0 0;
-        width: 60px;
+        width: 50px;
         flex-grow: 0;
+    }
+    
+    .main-content-text-right{
+        margin-left: -60px;
+    }
+    .main-content-text-left{
+        margin-right: -60px;
     }
 }
 
